@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="shop.js" defer></script>
     <title>Keripik Syifa</title>
     <style>
       .slide-in {
@@ -171,67 +172,119 @@
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Keripik Pisang</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Card 1 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow product-card">
-            <a href="#">
-              <img class="w-full h-64 object-cover" src="/asets/keripik pisang original.png" alt="Keripik Pisang Original">
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 text-center mb-2">Keripik Pisang Original</h5>
-              </a>
-              <div class="flex justify-center items-center mb-4">
-                <span class="text-2xl font-bold text-gray-900">Rp 15.000</span>
-              </div>
-              <a href="#" class="w-full flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                <svg class="w-5 h-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-                </svg>
-                Beli Sekarang
-              </a>
-            </div>
-          </div>
+          <article class="product-card bg-white border rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+         data-name="Keripik Pisang Original">
+
+  <img class="w-full h-64 object-cover"
+       src="/asets/keripik pisang original.png" alt="Keripik Pisang Original">
+
+  <div class="p-5 space-y-3">
+    <h5 class="title text-xl font-semibold text-center">Keripik Pisang Original</h5>
+    <p class="text-center text-gray-500 font-bold">
+      Rp <span class="price"></span>
+    </p>
+
+    <!-- ===== OPTION WRAPPER (disembunyikan dahulu) ===== -->
+    <div class="order-options hidden space-y-2">
+      <label class="block text-sm text-gray-600">Berat</label>
+      <select class="weight w-full border rounded px-2 py-1">
+        <option value="100"  data-price="5000">1 ons – Rp 5.000</option>
+        <option value="1000" data-price="80000">1 kg – Rp 80.000</option>
+      </select>
+
+      <label class="block text-sm text-gray-600">Jumlah</label>
+      <input type="number" min="1" value="1"
+             class="qty w-full border rounded px-2 py-1" />
+    </div>
+
+    <!-- tombol multi-fungsi -->
+    <button class="action w-full flex items-center justify-center gap-2
+                   bg-blue-600 text-white py-2 rounded">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 18 20">
+        <path d="M6 2h8l2 6H4zM3 8h14l-1 9H4z"/>
+      </svg>
+      <span class="btn-text">Pesan</span>
+    </button>
+  </div>
+</article>
 
           <!-- Card 2 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow product-card">
-            <a href="#">
-              <img class="w-full h-64 object-cover" src="/asets/keripik pisang asin.png" alt="Keripik Pisang Asin">
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 text-center mb-2">Keripik Pisang Asin</h5>
-              </a>
-              <div class="flex justify-center items-center mb-4">
-                <span class="text-2xl font-bold text-gray-900">Rp 18.000</span>
-              </div>
-              <a href="#" class="w-full flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                <svg class="w-5 h-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-                </svg>
-                Beli Sekarang
-              </a>
-            </div>
-          </div>
+          <article class="product-card bg-white border rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+         data-name="Keripik Pisang Asin">
+
+  <img class="w-full h-64 object-cover"
+       src="/asets/keripik pisang asin.png"
+       alt="Keripik Pisang Asin">
+
+  <div class="p-5 space-y-3">
+    <h5 class="title text-xl font-semibold text-center">Keripik Pisang Asin</h5>
+
+    <!-- harga total -->
+    <p class="text-center text-gray-500 font-bold">
+      Rp <span class="price"></span>
+    </p>
+
+    <!-- opsi berat + jumlah (DISembunyikan dulu) -->
+    <div class="order-options hidden space-y-2">
+      <label class="block text-sm text-gray-600">Berat</label>
+      <select class="weight w-full border rounded px-2 py-1">
+        <option value="100"  data-price="5000">1 ons – Rp 5.000</option>
+        <option value="1000" data-price="80000">1 kg – Rp 80.000</option>
+      </select>
+
+      <label class="block text-sm text-gray-600">Jumlah</label>
+      <input type="number" min="1" value="1"
+             class="qty w-full border rounded px-2 py-1">
+    </div>
+
+    <!-- tombol multi-fungsi -->
+    <button class="action w-full flex items-center justify-center gap-2
+                   bg-blue-600 text-white py-2 rounded">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 18 20">
+        <path d="M6 2h8l2 6H4zM3 8h14l-1 9H4z"/>
+      </svg>
+      <span class="btn-text">Pesan</span>
+    </button>
+  </div>
+</article>
 
           <!-- Card 3 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow product-card">
-            <a href="#">
-              <img class="w-full h-64 object-cover" src="/asets/Produk Keripik Pisang manis.jpg" alt="Keripik Pisang Manis">
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 text-center mb-2">Keripik Pisang Manis</h5>
-              </a>
-              <div class="flex justify-center items-center mb-4">
-                <span class="text-2xl font-bold text-gray-900">Rp 20.000</span>
-              </div>
-              <a href="#" class="w-full flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                <svg class="w-5 h-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-                </svg>
-                Beli Sekarang
-              </a>
-            </div>
-          </div>
+          <article class="product-card bg-white border rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+         data-name="Keripik Pisang Manis">
+
+  <img class="w-full h-64 object-cover"
+       src="/asets/Produk Keripik Pisang manis.jpg"
+       alt="Keripik Pisang Manis">
+
+  <div class="p-5 space-y-3">
+    <h5 class="title text-xl font-semibold text-center">Keripik Pisang Manis</h5>
+
+    <p class="text-center text-gray-500 font-bold">
+      Rp <span class="price"></span>
+    </p>
+
+    <!-- Opsi berat + jumlah, disembunyikan awal -->
+    <div class="order-options hidden space-y-2">
+      <label class="block text-sm text-gray-600">Berat</label>
+      <select class="weight w-full border rounded px-2 py-1">
+        <option value="100"  data-price="5000">1 ons – Rp 5.000</option>
+        <option value="1000" data-price="80000">1 kg – Rp 80.000</option>
+      </select>
+
+      <label class="block text-sm text-gray-600">Jumlah</label>
+      <input type="number" min="1" value="1"
+             class="qty w-full border rounded px-2 py-1">
+    </div>
+
+    <button class="action w-full flex items-center justify-center gap-2
+                   bg-blue-600 text-white py-2 rounded">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 18 20">
+        <path d="M6 2h8l2 6H4zM3 8h14l-1 9H4z"/>
+      </svg>
+      <span class="btn-text">Pesan</span>
+    </button>
+  </div>
+</article>
         </div>
       </div>
 
@@ -240,67 +293,111 @@
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Keripik Singkong</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Card 4 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow product-card">
-            <a href="#">
-              <img class="w-full h-64 object-cover" src="/asets/contoh gambar produk keripik singkong original.png" alt="Keripik Singkong Original">
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 text-center mb-2">Keripik Singkong Original</h5>
-              </a>
-              <div class="flex justify-center items-center mb-4">
-                <span class="text-2xl font-bold text-gray-900">Rp 12.000</span>
-              </div>
-              <a href="#" class="w-full flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                <svg class="w-5 h-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-                </svg>
-                Beli Sekarang
-              </a>
-            </div>
-          </div>
+         <article class="product-card bg-white border rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+         data-name="Keripik Singkong Original">
+
+  <img class="w-full h-64 object-cover"
+       src="/asets/contoh gambar produk keripik singkong original.png"
+       alt="Keripik Singkong Original">
+
+  <div class="p-5 space-y-3">
+    <h5 class="title text-xl font-semibold text-center">Keripik Singkong Original</h5>
+
+    <p class="text-center text-gray-500 font-bold">
+      Rp <span class="price"></span>
+    </p>
+
+    <!-- Berat & Jumlah (disembunyikan dulu) -->
+    <div class="order-options hidden space-y-2">
+      <label class="block text-sm text-gray-600">Berat</label>
+      <select class="weight w-full border rounded px-2 py-1">
+        <option value="100"  data-price="5000">1 ons – Rp 5.000</option>
+        <option value="1000" data-price="80000">1 kg – Rp 80.000</option>
+      </select>
+
+      <label class="block text-sm text-gray-600">Jumlah</label>
+      <input type="number" min="1" value="1"
+             class="qty w-full border rounded px-2 py-1">
+    </div>
+
+    <button class="action w-full flex items-center justify-center gap-2
+                   bg-blue-600 text-white py-2 rounded">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 18 20">
+        <path d="M6 2h8l2 6H4zM3 8h14l-1 9H4z"/>
+      </svg>
+      <span class="btn-text">Pesan</span>
+    </button>
+  </div>
+</article>
 
           <!-- Card 5 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow product-card">
-            <a href="#">
-              <img class="w-full h-64 object-cover" src="/asets/keripik singkong tidak dalam kemasan sudah terpotong asin.png" alt="Keripik Singkong Asin">
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 text-center mb-2">Keripik Singkong Asin</h5>
-              </a>
-              <div class="flex justify-center items-center mb-4">
-                <span class="text-2xl font-bold text-gray-900">Rp 15.000</span>
-              </div>
-              <a href="#" class="w-full flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                <svg class="w-5 h-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-                </svg>
-                Beli Sekarang
-              </a>
-            </div>
-          </div>
+         <article class="product-card bg-white border rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+         data-name="Keripik Singkong Asin">
+
+  <img class="w-full h-64 object-cover"
+       src="/asets/keripik singkong tidak dalam kemasan sudah terpotong asin.png"
+       alt="Keripik Singkong Asin">
+
+  <div class="p-5 space-y-3">
+    <h5 class="title text-xl font-semibold text-center">Keripik Singkong Asin</h5>
+    <p class="text-center text-gray-500 font-bold">Rp <span class="price"></span></p>
+
+    <div class="order-options hidden space-y-2">
+      <label class="block text-sm text-gray-600">Berat</label>
+      <select class="weight w-full border rounded px-2 py-1">
+        <option value="100"  data-price="5000">1 ons – Rp 5.000</option>
+        <option value="1000" data-price="80000">1 kg – Rp 80.000</option>
+      </select>
+
+      <label class="block text-sm text-gray-600">Jumlah</label>
+      <input type="number" min="1" value="1"
+             class="qty w-full border rounded px-2 py-1">
+    </div>
+
+    <button class="action w-full flex items-center justify-center gap-2
+                   bg-blue-600 text-white py-2 rounded">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 18 20">
+        <path d="M6 2h8l2 6H4zM3 8h14l-1 9H4z"/>
+      </svg>
+      <span class="btn-text">Pesan</span>
+    </button>
+  </div>
+</article>
 
           <!-- Card 6 -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow product-card">
-            <a href="#">
-              <img class="w-full h-64 object-cover" src="/asets/keripik singkong pedas.png" alt="Keripik Singkong Pedas">
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 text-center mb-2">Keripik Singkong Pedas</h5>
-              </a>
-              <div class="flex justify-center items-center mb-4">
-                <span class="text-2xl font-bold text-gray-900">Rp 17.000</span>
-              </div>
-              <a href="#" class="w-full flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                <svg class="w-5 h-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-                </svg>
-                Beli Sekarang
-              </a>
-            </div>
-          </div>
+          <article class="product-card bg-white border rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+         data-name="Keripik Singkong Pedas">
+
+  <img class="w-full h-64 object-cover"
+       src="/asets/keripik singkong pedas.png"
+       alt="Keripik Singkong Pedas">
+
+  <div class="p-5 space-y-3">
+    <h5 class="title text-xl font-semibold text-center">Keripik Singkong Pedas</h5>
+    <p class="text-center text-gray-500 font-bold">Rp <span class="price"></span></p>
+
+    <div class="order-options hidden space-y-2">
+      <label class="block text-sm text-gray-600">Berat</label>
+      <select class="weight w-full border rounded px-2 py-1">
+        <option value="100"  data-price="5000">1 ons – Rp 5.000</option>
+        <option value="1000" data-price="80000">1 kg – Rp 80.000</option>
+      </select>
+
+      <label class="block text-sm text-gray-600">Jumlah</label>
+      <input type="number" min="1" value="1"
+             class="qty w-full border rounded px-2 py-1">
+    </div>
+
+    <button class="action w-full flex items-center justify-center gap-2
+                   bg-blue-600 text-white py-2 rounded">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 18 20">
+        <path d="M6 2h8l2 6H4zM3 8h14l-1 9H4z"/>
+      </svg>
+      <span class="btn-text">Pesan</span>
+    </button>
+  </div>
+</article>
+
         </div>
       </div>
     </div>
